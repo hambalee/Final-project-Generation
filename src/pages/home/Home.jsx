@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="home-page">
       <div style={{zIndex: "1"}}>
-        <div className="stars">
+        {/* <div className="stars">
           <div className="star"></div>
           <div className="star"></div>
           <div className="star"></div>
@@ -61,7 +61,7 @@ function Home() {
           <div className="star"></div>
           <div className="star"></div>
           <div className="star"></div>
-        </div>
+        </div> */}
         <Navbar />
         <Header />
         <Container />

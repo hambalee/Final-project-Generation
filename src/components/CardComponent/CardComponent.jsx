@@ -7,6 +7,10 @@ import "./CardComponent.css";
 import { useGlobalContext } from "../../context/Context";
 import { useNavigate } from "react-router-dom";
 import run from "../../assets/run.png";
+import { MdDateRange } from "react-icons/md";
+import { BiTime } from "react-icons/bi";
+import { FaHashtag } from "react-icons/fa";
+import moment from "moment";
 
 function CardComponent({
   id,
@@ -63,7 +67,7 @@ function CardComponent({
       >
         <Card.Header>
           <div className="card-component-title d-flex justify-content-center">
-            <div className="m-2">
+            <div className="m-2 mb-4">
               {/* <BiRun className="card-font-size-header" /> */}
               <img
                 // src={imgActivities.get(id)}
@@ -78,77 +82,96 @@ function CardComponent({
             </div>
           </div>
         </Card.Header>
-        <Card.Body className="card-component-detail p-3" style={{ zIndex: 1 }}>
+        <Card.Body
+          className="card-component-detail p-3"
+          style={{ zIndex: 1, width: "24rem" }}
+        >
           <div className="card-component-detail-date">
             <div className=" d-flex justify-content-between">
               <div className="card-font-size-body">
-                <b>Date: </b>
-                <span>{date?.slice(0, 10)}</span>
+                {/* <b>Date:MdDateRange </b> */}
+                <MdDateRange className="mb-1" />
+                {/* <span className="m-2">{date?.slice(0, 10)}</span> */}
+                <span className="m-2">
+                  {moment(date, "YYYY-MM-DD").format("LL")}
+                </span>
               </div>
-
-              <div className="card-font-size-body">
-                <b>Duration: </b>
-                <span>{duration} Minutes</span>
-              </div>
+            </div>
+            <div className="card-font-size-body">
+              {/* <b>Duration: </b> */}
+              <BiTime className="mb-1" />
+              <span className="m-2">{duration} Minutes</span>
             </div>
 
             <div className="card-font-size-body">
-              <b>Type: </b>
-              <span>{type}</span>
+              {/* <b className="">Type: </b> */}
+              <FaHashtag style={{ color: "skyblue" }} className="mb-1" />
+              <span className="m-1">{type}</span>
             </div>
             <div className="card-font-size-body">
-              <b>Description: </b>
+              <b>Description : </b>
               <span>{description}</span>
             </div>
           </div>
 
-          <div className="card-component-bottom d-flex justify-content-between">
-            {statusActivity.get(id) ? (
-              <>
-                <div className="d-flex align-items-center">
-                  <Form.Check
-                    type="switch"
-                    id={id}
-                    label={status}
-                    defaultChecked={statusActivity.get(id)}
-                    className="card-font-size-body"
-                    onClick={handleclickChangeStatus}
-                  />
-                  <p
-                    style={{
-                      color: "green",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Success
-                  </p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="d-flex align-items-center">
-                  <Form.Check
-                    type="switch"
-                    // id="custom-switch"
-                    id={id}
-                    label={status}
-                    defaultChecked={statusActivity.get(id)}
-                    className="card-font-size-body"
-                    onClick={handleclickChangeStatus}
-                  />
-                </div>
-              </>
-            )}
+          <div className="d-flex justify-content-between w-100">
+            <div className="w-100">
+              <div className="d-flex justify-content-between w-100 pt-3">
+                {statusActivity.get(id) ? (
+                  <>
+                    <div className="d-flex justify-content-between w-50">
+                      <div></div>
+                      <Form.Check
+                        type="switch"
+                        id={id}
+                        label={status}
+                        defaultChecked={statusActivity.get(id)}
+                        className="card-font-size-body"
+                        onClick={handleclickChangeStatus}
+                      />
+                    </div>
+                    <div className="w-50">
+                      <p
+                        style={{
+                          color: "green",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        Completed
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="d-flex justify-content-between w-50">
+                      <div></div>
+                      <Form.Check
+                        type="switch"
+                        // id="custom-switch"
+                        id={id}
+                        label={status}
+                        defaultChecked={statusActivity.get(id)}
+                        className="card-font-size-body"
+                        onClick={handleclickChangeStatus}
+                      />
+                    </div>
+                    <div className="w-50">
+                      <p className="">Pending</p>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
             <div className="d-flex justify-content-end card-font-size-body">
               <Button
-                variant="primary m-1"
+                variant="outline-primary m-1"
                 type="button"
                 onClick={handleClickEdit}
               >
                 Edit
               </Button>
               <Button
-                variant="danger m-1"
+                variant="outline-danger m-1"
                 type="button"
                 onClick={handleClickDelete}
               >

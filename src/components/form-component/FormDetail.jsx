@@ -324,7 +324,7 @@ function FormDetail() {
 
           {setType ? (
             <div className="form-img">
-              <img src={typeToImageActivityPath(formValues.type)} alt="" />
+              {/* <img src={typeToImageActivityPath(formValues.type)} alt="" /> */}
             </div>
           ) : (
             ""
@@ -415,7 +415,9 @@ function FormDetail() {
       ) : (
         <Form className="form-component" onSubmit={handleSubmitForm}>
           <div className="form-title">
-            <label htmlFor="name">Title</label>
+            <label htmlFor="name" className="mx-4">
+              Title
+            </label>
             <input
               type="text"
               name="title"
@@ -432,26 +434,26 @@ function FormDetail() {
           {setType ? (
             <div className="form-img">
               <img
-                src={typeToImageActivityPath(formValues.type)}
+                // src={typeToImageActivityPath(formValues.type)}
                 // value={formValues.imgActivities}
               />
             </div>
           ) : null}
 
           <div className="form-type-select">
-            <p>Type</p>
+            <p className="mx-4">Type</p>
             <select
               name="type"
               onChange={handleTypeChange}
               value={formValues.type}
             >
-              <option value="">select Type of Activities</option>
+              <option value="">Select Type of Activities</option>
               <option value="run">Run</option>
               <option value="swim">Swim</option>
-              <option value="bike">bike</option>
-              <option value="walk">walk</option>
-              <option value="hike">hike</option>
-              <option value="scuba">scuba</option>
+              <option value="bike">Bike</option>
+              <option value="walk">Walk</option>
+              <option value="hike">Hike</option>
+              <option value="scuba">Scuba</option>
             </select>
           </div>
           {formErrors.type ? (
@@ -461,7 +463,7 @@ function FormDetail() {
           )}
 
           <div className="form-date-time">
-            <p>Date / Time</p>
+            <p className="mx-4">Date / Time</p>
             <input
               type="date"
               name="date"
@@ -476,8 +478,8 @@ function FormDetail() {
           )}
 
           <div className="form-duration">
-            <p>Duration</p>
-            <span>Start</span>
+            <p className="mx-4">Duration</p>
+            <span className="mx-4">Start</span>
             <input
               type="time"
               name="startDuration"
@@ -485,12 +487,12 @@ function FormDetail() {
               value={formValues.startDuration}
             />
             {formErrors.startDuration ? (
-              <div className="text-danger m-2">{formErrors.startDuration}</div>
+              <div className="text-danger m-2 text-center">{formErrors.startDuration}</div>
             ) : (
               ""
             )}
 
-            <span>End</span>
+            <span className="mx-4">End</span>
             <input
               type="time"
               name="endDuration"
@@ -498,7 +500,7 @@ function FormDetail() {
               value={formValues.endDuration}
             />
             {formErrors.endDuration ? (
-              <div className="text-danger m-2">{formErrors.endDuration}</div>
+              <div className="text-danger m-2 text-center">{formErrors.endDuration}</div>
             ) : (
               ""
             )}
@@ -507,7 +509,7 @@ function FormDetail() {
           </div>
 
           <div className="form-desc">
-            <p>Description</p>
+            <p className="mx-4">Description</p>
             <input
               type="text"
               name="description"
@@ -521,7 +523,9 @@ function FormDetail() {
             ""
           )}
 
-          <button type="submit">ADD ACTIVITIES</button>
+          <button type="submit" className="mb-4">
+            ADD ACTIVITIES
+          </button>
         </Form>
       )}
     </section>

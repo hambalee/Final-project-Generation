@@ -6,28 +6,29 @@
   justify-content: center;
 }
 .navbar-head span {
+  color: #e673dc;
   font: 700 4em/1 "Oswald", sans-serif;
   letter-spacing: 0;
   padding: 0.25em 0 0.325em;
   display: block;
   margin: 0 auto;
-  text-shadow: 0 0 80px rgb(87, 96, 179);
+  /* text-shadow: 0 0 80px rgb(87, 96, 179); */
 
   /* Clip Background Image */
 
-  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-  -webkit-background-clip: text;
-  background-clip: text;
+  /* background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y; */
+  /* -webkit-background-clip: text; */
+  /* background-clip: text; */
 
   /* Animate Background Image */
 
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: aitf 80s linear infinite;
-
+  /* -webkit-text-fill-color: transparent; */
+  /* -webkit-animation: aitf 80s linear infinite; */
+/*  */
   /* Activate hardware acceleration for smoother animations */
 
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
+  /* -webkit-transform: translate3d(0, 0, 0); */
+  /* -webkit-backface-visibility: hidden; */
 }
 
 @-webkit-keyframes aitf {
@@ -38,7 +39,7 @@
     background-position: 100% 50%;
   }
 }
-
+/* 
 @media screen and (min-width: 390px) {
   .navbar-head span {
     font-size: 20px;
@@ -68,4 +69,4 @@
   .navbar-head span {
     font-size: 40px;
   }
-}
+} */

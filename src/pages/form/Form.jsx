@@ -6,7 +6,7 @@ import "./form.css";
 
 function Form() {
   return (
-    <div>
+    <div style={{backgroundColor : "#cccccc38"}}>
       <Navbar />
       <div>
         <Header />

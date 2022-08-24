@@ -1,9 +1,9 @@
-.card-font-size-header {
+/* .card-font-size-header {
   font-size: 3rem;
 }
 .card-font-size-body {
   font-size: 1.45rem;
-}
+} */
 
 .card-component-imgactivity {
   width: 40px;
@@ -60,7 +60,7 @@
 
 @media screen and (min-width: 650px) {
   .card-component {
-    width: 30rem !important;
+    width: 24rem !important;
   }
 
   .card-component-detail {
@@ -73,7 +73,7 @@
   .card-component-title {
     display: flex;
     align-items: center;
-    width: 28rem;
+    width: 22rem;
     height: 50px;
   }
 

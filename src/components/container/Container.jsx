@@ -23,8 +23,10 @@ function Container(props) {
   ));
 
   return (
-    <div className="container-fluid">
-      <div className="d-flex flex-wrap justify-content-around">{cards}</div>
+    <div className="container d-flex flex-wrap">
+      {/* <div className="d-flex flex-wrap"> */}
+        {cards}
+      {/* </div> */}
     </div>
   );
 }

@@ -68,7 +68,7 @@ function Header() {
   };
 
   return (
-    <section className="header">
+    <section className="header container">
       {location.pathname === "/" ? (
         <>
           <div className="header-activity">
@@ -77,10 +77,10 @@ function Header() {
             <button onClick={handleClickSortSwim}>SWIM</button>
             <div className="header-dropdown">
               <select onClick={handleClickSortBike}>
-                <option value="bike">bike</option>
-                <option value="walk">walk</option>
-                <option value="hike">hike</option>
-                <option value="scuba">scuba</option>
+                <option value="bike">Bike</option>
+                <option value="walk">Walk</option>
+                <option value="hike">Hike</option>
+                <option value="scuba">Scuba</option>
               </select>
             </div>
           </div>
@@ -94,10 +94,10 @@ function Header() {
               <select onClick={handleClickSortBike}>
                 <option value="run">Run</option>
                 <option value="swim">Swim</option>
-                <option value="bike">bike</option>
-                <option value="walk">walk</option>
-                <option value="hike">hike</option>
-                <option value="scuba">scuba</option>
+                <option value="bike">Bike</option>
+                <option value="walk">Walk</option>
+                <option value="hike">Hike</option>
+                <option value="scuba">Scuba</option>
               </select>
             </div>
           </div>

@@ -7,7 +7,7 @@ import { BsFillShieldLockFill } from "react-icons/bs";
 import "./ProfileComponent.css";
 
 export default function ProfileComponent({
-  username = "Username 1",
+  username = "John Smith",
   profilePhoto = "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg",
   coverPhoto = "https://images.template.net/wp-content/uploads/2014/11/facebook-cover-photos-nature.jpg",
   email = "foobar@foobar.com",
@@ -38,7 +38,7 @@ export default function ProfileComponent({
       <div className="main mt-3">
         <div></div>
         <div>
-          <h1>Name : {username}</h1>
+          <h1>{username}</h1>
         </div>
         {/* <div className="fs-4">Email : {email}</div> */}
 
