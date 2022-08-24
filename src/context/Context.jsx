@@ -245,7 +245,7 @@ const AppProvider = ({ children }) => {
 
   //?! Fetch Data Activity ------------------------------------------
 
-  const url = "https://final-project-generation-backend.vercel.app/"
+  const url = import.meta.env.VITE_SERVER_URL
 
   const body = { token: localStorage.getItem("token") };
   console.log("body in context : ", body);
