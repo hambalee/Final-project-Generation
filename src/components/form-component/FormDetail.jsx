@@ -42,6 +42,7 @@ function FormDetail() {
     clearActivity,
     typeToImageActivityPath,
     url,
+    config,
   } = useGlobalContext();
 
   const initialValues = {
@@ -74,7 +75,7 @@ function FormDetail() {
 
   const getActivityById = async (acitvityId) => {
     try {
-      const res = await axios.get(`${url}/activity/${acitvityId}`);
+      const res = await axios.get(`${url}/activity/${acitvityId}`, config);
       console.log("Context getActivityById", res.data);
       return res.data;
     } catch (e) {
