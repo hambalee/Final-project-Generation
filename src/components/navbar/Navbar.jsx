@@ -15,7 +15,7 @@ function Navbar() {
   };
 
   return (
-    <div className="navbar-head p-2 rounded-3 container">
+    <div className="navbar-head p-2 rounded-3 container justify-content-between">
       {location.pathname === "/profile" ? (
         <Link to="/">
           <Button variant="outline-primary" size="lg" className="backButton">
@@ -25,7 +25,7 @@ function Navbar() {
         </Link>
       ) : null}
 
-      <span>WELCOME TO YOUR ACTIVITIES</span>
+      {/* <span>WELCOME TO YOUR ACTIVITIES</span> */}
 
       {location.pathname === "/profile" ? (
         <Button
